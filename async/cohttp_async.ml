@@ -54,7 +54,7 @@ module IO = struct
       )
 
   let read = 
-    let buf = String.create 4096 in
+    let buf = String.create 16384 in
     fun ic len ->
       Reader.read ic ~len buf >>=
       function
